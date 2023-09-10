@@ -10,8 +10,8 @@ import com.example.pruebaapi.R
 import com.example.pruebaapi.databinding.FragmentDialogImgBreedBinding
 import com.squareup.picasso.Picasso
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
+
+
 private const val IMG_BREED = "IMG_BREED"
 
 class DialogImgBreedFragment : DialogFragment() {
@@ -36,7 +36,7 @@ class DialogImgBreedFragment : DialogFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
+
         binding = FragmentDialogImgBreedBinding.inflate(inflater, container, false)
         return binding.root
     }

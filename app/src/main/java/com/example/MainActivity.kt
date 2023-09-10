@@ -1,14 +1,15 @@
-package com.example.pruebaapi.presentation.ui.activity
+package com.example
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pruebaapi.R
-import com.example.pruebaapi.data.network.APIService
+import com.example.pruebaapi.data.remote.network.APIService
 import com.example.pruebaapi.databinding.ActivityMainBinding
 import com.example.pruebaapi.presentation.ui.adapter.DogAdapter
 import com.example.pruebaapi.presentation.ui.fragment.dialog.DialogImgBreedFragment
+import com.example.pruebaapi.presentation.viewModel.DogViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -19,6 +20,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var adapter: DogAdapter
     private val dogList = mutableListOf<String>()
+    private val viewModel = DogViewModel ()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

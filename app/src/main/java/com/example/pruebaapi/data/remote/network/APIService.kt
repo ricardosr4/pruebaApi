@@ -1,7 +1,7 @@
-package com.example.pruebaapi.data.network
+package com.example.pruebaapi.data.remote.network
 
-import com.example.pruebaapi.data.model.BreedImgResponse
-import com.example.pruebaapi.data.model.DogsResponse
+import com.example.pruebaapi.data.remote.model.BreedImgResponse
+import com.example.pruebaapi.data.remote.model.DogsResponse
 import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Url

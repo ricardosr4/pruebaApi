@@ -6,7 +6,7 @@
     android:layout_margin="5dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.ui.activity.MainActivity">
+    tools:context="com.example.MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvDogs"
