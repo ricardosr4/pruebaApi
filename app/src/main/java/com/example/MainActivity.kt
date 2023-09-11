@@ -3,6 +3,7 @@ package com.example
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.ViewModel
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pruebaapi.R
 import com.example.pruebaapi.data.remote.network.APIService
@@ -40,8 +41,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
-
-    private fun getRetrofit(): Retrofit {
+    fun getRetrofit(): Retrofit {
         return Retrofit.Builder()
             .baseUrl("https://dog.ceo/api/")
             .addConverterFactory(GsonConverterFactory.create())
@@ -75,7 +75,7 @@ class MainActivity : AppCompatActivity() {
             runOnUiThread {
                 if (call.isSuccessful) {
                     val img: String = imgbreed?.image ?: ""
-                    // todo se llama al dialog fragment enviando la imagen que se recupera desde la api
+
                     showDialog(img)
                 } else {
                     showError()
@@ -83,7 +83,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
     }
-
 
     private fun showError() {
         Toast.makeText(this, "ha ocurrido un error", Toast.LENGTH_SHORT).show()

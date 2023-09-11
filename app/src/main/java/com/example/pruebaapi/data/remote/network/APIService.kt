@@ -8,7 +8,7 @@ import retrofit2.http.Url
 
 interface APIService {
     @GET
-    suspend fun getDogsByBreeds(@Url url:String): Response<DogsResponse>
+     suspend fun getDogsByBreeds(@Url url:String): Response<DogsResponse>
 
     @GET
     suspend fun getBreedImg(@Url breed:String):Response<BreedImgResponse>
